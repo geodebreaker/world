@@ -4,8 +4,8 @@
   "description": "multiplayer world",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "node index.js"
+    "start": "node svr/index.js",
+    "test": "node svr/index.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/geodebreaker/world/issues"
   },
-  "homepage": "https://github.com/geodebreaker/world#readme"
+  "homepage": "https://github.com/geodebreaker/world#readme",
+  "dependencies": {
+    "ws": "^8.18.0"
+  }
 }
