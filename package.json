@@ -1,0 +1,20 @@
+{
+  "name": "world",
+  "version": "1.0.0",
+  "description": "multiplayer world",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geodebreaker/world.git"
+  },
+  "author": "geodebreaker",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/geodebreaker/world/issues"
+  },
+  "homepage": "https://github.com/geodebreaker/world#readme"
+}
