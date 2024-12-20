@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "CSPixel";
+  src: url("assets/ComicSansPixel.ttf");
+}
+
 body {
   color: white;
   font-family: monospace;
