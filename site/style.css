@@ -1,0 +1,38 @@
+body {
+  color: white;
+  font-family: monospace;
+  font-size: 20px;
+  overflow: hidden;
+  margin: 0;
+}
+
+#termcon {
+  padding: 8px;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  background: #2228;
+}
+
+#termin {
+  background: none;
+  border: 2px solid #888;
+  border-radius: 0;
+  outline: none;
+  color: white;
+  font-family: monospace;
+  font-size: 15px;
+  width: calc(100% - 20px);
+  height: 30px;
+  padding: 0 8px;
+}
+
+#termout {
+  border: 2px solid #888;
+  color: white;
+  font-family: monospace;
+  font-size: 15px;
+  width: calc(100% - 4px);
+  height: calc(100% - 46px);
+  margin-bottom: 8px;
+}

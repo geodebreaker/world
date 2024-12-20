@@ -18,7 +18,7 @@ function send(ws, type, data) {
 function recv(ws, type, data) {
   console.log(ws.id, '<', type + ':', data);
   recivers.filter(x => x[0] == type)
-    .map(x => x[1](data));
+    .map(x => x[1](ws, data));
 }
 
 wss.on('listening', () => {

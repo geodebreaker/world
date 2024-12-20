@@ -1,5 +1,5 @@
 function send(type, data) {
-  console.log('>', type + ':', data);
+  log('>', type + ':', data);
   ws.send(type + ':' + JSON.stringify(data));
 }
 
@@ -10,7 +10,7 @@ function addrecv(x, y) {
 }
 
 function recv(type, data) {
-  console.log('<', type+ ':', data);
+  log('<', type + ':', data);
   recivers.filter(x => x[0] == type)
     .map(x => x[1](data));
 }
@@ -24,9 +24,9 @@ ws.onmessage = x => {
   try {
     x = JSON.parse(x);
   } catch (e) {
-    console.error(e)
+    log(e)
   }
   recv(y, x);
 }
 
-addrecv('test', data => send('test', data))
+addrecv('test', data => send('test', data));
