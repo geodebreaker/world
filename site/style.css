@@ -41,3 +41,16 @@ body {
   height: calc(100% - 46px);
   margin-bottom: 8px;
 }
+
+#termclose {
+  color: #f008;
+  position: absolute;
+  top: 5px;
+  right: 12px;
+  cursor: pointer;
+  font-size: 23px;
+}
+
+#termclose:hover {
+  color: red;
+}

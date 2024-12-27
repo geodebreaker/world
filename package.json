@@ -4,7 +4,7 @@
   "description": "multiplayer world",
   "main": "index.js",
   "scripts": {
-    "start": "node svr/index.js",
+    "start": "npx electron svr/index.js",
     "test": "node svr/index.js"
   },
   "repository": {
