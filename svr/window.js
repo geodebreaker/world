@@ -12,7 +12,7 @@ if (app) {
       event.sender.send('read-folder-response', { success: false, error: error.message });
     }
   });
-  
+
   app.on('window-all-closed', () => {
     if (process.platform !== 'darwin') app.quit();
   });
@@ -21,9 +21,10 @@ if (app) {
 let main;
 
 function createWindow() {
+  console.log('Opening window');
   main = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 1000,
+    height: 800,
     resizable: true,
     autoHideMenuBar: true,
     backgroundColor: '#222222',
@@ -31,12 +32,15 @@ function createWindow() {
     icon: '../site/goober.ico',
     webPreferences: {
       nodeIntegration: true,
-      contextIsolation: false,
+      contextIsolation: false
     },
   });
 
   main.loadFile('../site/index.html');
-  main.on('closed', () => (main = null));
+  main.on('closed', () => {
+    console.log('Window closed');
+    main = null;
+  });
 }
 
 module.exports = { app, main, createWindow };

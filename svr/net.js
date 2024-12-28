@@ -26,7 +26,6 @@ wss.on('listening', () => {
 });
 
 wss.on('connection', (ws, req) => {
-  ws.room = null;
   ws.id = genID();
 
   ws.on('message', x => {
