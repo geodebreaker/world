@@ -3,12 +3,21 @@
   src: url("assets/ComicSansPixel.ttf");
 }
 
+#fps {
+  position: absolute;
+  user-select: none;
+  top: 5px;
+  left: 5px;
+  font-size: 15px;
+}
+
 body {
   color: white;
   font-family: monospace;
   font-size: 20px;
   overflow: hidden;
   margin: 0;
+  background: #222;
 }
 
 #termcon {
@@ -16,7 +25,11 @@ body {
   width: 100vw;
   height: 100vh;
   box-sizing: border-box;
-  background: #2228;
+  background: #222a;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10000;
 }
 
 #termin {
@@ -40,6 +53,10 @@ body {
   width: calc(100% - 4px);
   height: calc(100% - 46px);
   margin-bottom: 8px;
+  overflow: scroll;
+  word-break: keep-all;
+  scrollbar-width: 0px;
+  background: none;
 }
 
 #termclose {
@@ -49,8 +66,32 @@ body {
   right: 12px;
   cursor: pointer;
   font-size: 23px;
+  user-select: none;
 }
 
 #termclose:hover {
   color: red;
+}
+
+::-webkit-scrollbar {
+  width: 12px; 
+  height: 0px; 
+}
+
+
+::-webkit-scrollbar-thumb {
+  background-color: #8884; 
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #8888; 
+}
+
+::-webkit-scrollbar-track {
+  display: none;
+}
+
+::-webkit-scrollbar-corner {
+  display: none;
 }

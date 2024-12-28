@@ -28,5 +28,3 @@ ws.onmessage = x => {
   }
   recv(y, x);
 }
-
-addrecv('test', data => send('test', data));

@@ -1,4 +1,8 @@
-const terminal = [];
+const terminal = [
+  'Welcome to the terminal!',
+  'Press [ctrl] + [~] or the close button to leave.',
+  'Type "help" to find commands.'
+];
 const terminalPrompt = '$';
 let terminalOpen = false;
 
@@ -9,13 +13,20 @@ const log = (...x) => {
 function terminalState(x) {
   terminalOpen = x;
   document.querySelector('#termcon').style.display = x ? 'block' : 'none';
-  if (x) document.querySelector('#termin').focus();
+  if (x) {
+    document.querySelector('#termin').focus();
+    makeTerminal();
+  }
 }
 
 function makeTerminal() {
   if (terminalOpen) {
+    let x = document.querySelector('#termout').scrollTop + 10 >
+      document.querySelector('#termout').scrollHeight - document.querySelector('#termout').clientHeight;
     document.querySelector('#termout').innerText =
       terminal.concat([terminalPrompt + ' ' + document.querySelector('#termin').value]).join('\n');
+    if (x)
+      document.querySelector('#termout').scrollTop = document.querySelector('#termout').scrollHeight;
   }
 }
 
@@ -38,4 +49,3 @@ window.addEventListener('keydown', x => {
 })
 
 setInterval(makeTerminal, 300);
-terminalState(true);
